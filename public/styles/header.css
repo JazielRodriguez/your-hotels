@@ -1,0 +1,17 @@
+.header {
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 2rem 0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: inherit;
+}
+.header-content nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
