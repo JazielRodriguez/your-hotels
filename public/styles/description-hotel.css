@@ -1,0 +1,39 @@
+.description__hotel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  align-items: start;
+}
+.description__hotel--location h2 {
+  margin: 2rem 0;
+}
+.description__hotel--location-map {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.address {
+  text-align: center;
+}
+.map {
+  display: block;
+  margin:0 auto;
+  height: 35rem;
+  width: 50rem;
+  background-color: cadetblue;
+}
+.cover-img {
+  width: 100%;
+  height: 25rem;
+  margin: 2rem 0;
+}
+.cover-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .map {
+ width: 35rem;
+  }
+}

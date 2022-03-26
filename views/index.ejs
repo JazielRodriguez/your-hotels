@@ -6,22 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/description-hotel.css" />
     <title>Your Hotels</title>
   </head>
   <body>
     <%- include('includes/header') %>
-    <div class="container">
-      <h2>Your Hotels</h2>
-      <p class="description">Lorem Ipsum is simply dummy text</p>
-    </div>
-    <div class="slider">
-        <div class="slider-text">
-            <h3>Lorem</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt saepe iure neque inventore aspernatur quidem voluptatibus porro esse veritatis quaerat magnam ea commodi, accusamus similique?
-            </p>
+    <div class="resume-hotel">
+    <div class="container description__hotel">
+      <div>
+        <h1>Your Hotels</h1>
+        <p class="description">Lorem Ipsum is simply dummy text</p>
+        <div class="cover-img">
+          <img src="/images/hotelImg.jpg" alt="" />
         </div>
+        <h3>Lorem Ipsum</h3>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English.
+        </p>
+      </div>
+      <div>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English.
+          <br />
+          <br />
+          Many desktop publishing packages and web page editors now use Lorem
+          Ipsum as their default model text, and a search for 'lorem ipsum' will
+          uncover many web sites still in their infancy. Various versions have
+          evolved over the years, sometimes by accident, sometimes on purpose
+          (injected humour and the like).
+        </p>
+        <div class="cover-img">
+          <img src="/images/secondHotelImg.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container description__hotel--location">
+      <h2>Ubicación</h2>
+      <div class="description__hotel--location-map">
+        <div class="map"></div>
+        <div>
+          <h3>It is a long established</h3>
+          <p>
+            Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it
+            look like readable English.
+            <br />
+            <br />
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text, and a search for 'lorem ipsum'
+            will uncover many web sites still in their infancy. Various versions
+            have evolved over the years, sometimes by accident, sometimes on
+            purpose (injected humour and the like).
+          </p>
+          <br />
+          <br />
+          <p class="address">
+            <b>
+              Your Hotels, Street Lorem Ipsum, 23 Number, Postal Code 00000{" "}
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="slider">
+      <div class="slider-text">
+        <h3>Lorem</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          saepe iure neque inventore aspernatur quidem voluptatibus porro esse
+          veritatis quaerat magnam ea commodi, accusamus similique?
+        </p>
+      </div>
     </div>
     <%- include('includes/footer') %>
   </body>
