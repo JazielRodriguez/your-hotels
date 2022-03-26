@@ -5,7 +5,7 @@
   --blanco: #ececec;
   --amarillo: #ffc300;
   --rojo: #ff1818;
-  --desc:#888;
+  --desc: #888;
 }
 html {
   font-size: 62.5%;
@@ -56,8 +56,8 @@ a {
   color: inherit;
 }
 .container {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 .description {
   color: var(--desc);
@@ -68,7 +68,7 @@ a {
 .slider {
   width: 100%;
   height: 30rem;
-  background-image: url('../images//bg.jpg');
+  background-image: url("../images//bg.jpg");
 }
 .slider-text {
   width: 50%;
@@ -79,10 +79,13 @@ a {
   justify-content: center;
   padding: 1.6rem;
   color: var(--blanco);
-  gap:2rem;
+  gap: 2rem;
 }
-@media (max-width:768px) {
-    .container {
-        width: 95%;
-    }
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  .slider-text {
+    width: 100%;
+  }
 }

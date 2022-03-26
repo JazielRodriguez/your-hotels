@@ -10,8 +10,25 @@
   color: inherit;
 }
 .header-content nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+.menu {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .header-content nav {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
 }

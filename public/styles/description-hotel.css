@@ -17,7 +17,7 @@
 }
 .map {
   display: block;
-  margin:0 auto;
+  margin: 0 auto;
   height: 35rem;
   width: 50rem;
   background-color: cadetblue;
@@ -32,8 +32,13 @@
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 480px) {
+  .description__hotel {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 768px) {
   .map {
- width: 35rem;
+    width: 35rem;
   }
 }
