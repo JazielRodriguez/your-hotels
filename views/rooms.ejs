@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/index.css">
-  <link rel="stylesheet" href="/styles/header.css">
-  <title>Habitaciones | Your Hotels</title>
-</head>
-<body>
-  <%- include('includes/header') %>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/room.css" />
+    <title>Habitaciones | Your Hotels</title>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+    <div class="container rooms">
+      <% for (const room of rooms) { %>
+      <div class="room">
+        <div class="room-desc">
+          <h3><%= room.roomName %></h3>
+          <p><%= room.description %></p>
+          <div class="room-info">
+            <p>$ <%= room.price %></p>
+            <button>Reservar</button>
+          </div>
+        </div>
+        <div class="img-room">
+          <img src="<%=room.img%>" alt="<%=room.roomName %>" />
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <%- include('includes/footer') %>
+  </body>
 </html>
