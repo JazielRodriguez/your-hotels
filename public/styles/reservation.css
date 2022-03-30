@@ -1,0 +1,36 @@
+.reserved-room {
+  padding: 8rem 0;
+}
+.reserved-room h1 {
+  margin-bottom: 1.8rem;
+}
+.room-reserved-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.room-reserved-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 2.6rem 0;
+}
+.dates input {
+  border: 0.1rem solid #000;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+.dates button {
+  border: none;
+  background-color: var(--azul);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 0.6rem;
+}
+

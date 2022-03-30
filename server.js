@@ -15,11 +15,6 @@ app.get('/rooms', async (req, res) => {
   const rooms = await db.getDb().collection('rooms').find().toArray()
   res.render('rooms', { rooms })
 })
-app.post('/rooms/:_id', (req, res) => {
-  // const { _id } = req.params
-  const { roomName } = req.body
-  res.send(` Detailed Page to  ${roomName}`)
-})
 app.get('/restaurants', async (req, res) => {
   const restaurants = await db
     .getDb()
@@ -29,14 +24,24 @@ app.get('/restaurants', async (req, res) => {
   // await console.log(restaurants)
   res.render('restaurants', { restaurants })
 })
-app.get('/cactivities', async (req, res) => {
+app.post('/detailed-restaurant/:_id', (req, res) => {
+  const details = req.body
+  res.render('detailed-restaurant', { details })
+  // res.send(details)
+})
+app.post('/reservation', (req, res) => {
+  const room = req.body
+  res.render('reservation', { room })
+  console.log(room)
+})
+app.get('/activities', async (req, res) => {
   const activities = await db.getDb().collection('activities').find().toArray()
   // await console.log(activities)
   res.render('activities', { activities })
 })
-app.get('/cart', (req, res) => {
-  res.render('cart')
-})
+// app.get('/cart', (req, res) => {
+// res.render('cart')
+// })
 db.connect().then(() => {
   app.listen(port)
 })

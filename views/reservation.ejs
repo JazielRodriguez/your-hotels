@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/reservation.css" />
+    <title>Habitaciones | Your Hotels</title>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+    <div class="container reserved-room">
+      <h1>Habitacion Reservada: <%= room.roomName %></h1>
+      <div class="room-reserved-layout">
+        <div class="room-reserved-desc">
+          <h2><%= room.roomName %></h2>
+          <p><%= room.description %></p>
+          <p><%= room.price %></p>
+        </div>
+        <div>
+          <img src="<%=room.img %>" alt="<%=room.roomName %>" />
+        </div>
+      </div>
+      <form action="/" class="dates">
+        <div>
+          <label for="entrada">Entrada: </label>
+          <input type="date" id="entrada" required/>
+        </div>
+        <div>
+          <label for="salida">Salida: </label>
+          <input type="date" id="salida"  required/>
+        </div>
+        <button>Reservar</button>
+      </form>
+    </div>
+    <%- include('includes/footer') %>
+  </body>
+</html>

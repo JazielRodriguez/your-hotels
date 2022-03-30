@@ -33,6 +33,7 @@
   padding: 1.5rem 1rem;
   background-color: var(--azul);
   border-radius: 0.6rem;
+  cursor: pointer;
   color: #fff;
 }
 

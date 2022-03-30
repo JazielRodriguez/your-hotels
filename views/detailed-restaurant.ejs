@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/detailed-restaurant.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <title>Carrito</title>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+    <div class="container detailed-restaurant">
+      <div>
+      <h1><%= details.restaurantName %></h1>
+      <p>Cuisine: <%= details.cuisine %></p>
+      <p>About it: <%= details.description%></p>
+      </div>
+      <div>
+
+      
+      <img src="<%= details.img %>" alt="<%= details.restaurantName %>" />
+      </div>
+      </div>
+    <%- include('includes/footer') %>
+  </body>
+</html>

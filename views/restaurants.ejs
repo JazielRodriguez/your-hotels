@@ -20,7 +20,28 @@
           <h3><%= restaurant.restaurantName %></h3>
           <p><%= restaurant.cuisine %></p>
           <p><%= restaurant.description %></p>
-          <button class="restaurant-btn">More Info</button>
+          <form
+            action="/detailed-restaurant/<%=restaurant._id %>"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="restaurantName"
+              value="<%= restaurant.restaurantName %>"
+            />
+            <input
+              type="hidden"
+              name="cuisine"
+              value="<%= restaurant.cuisine %>"
+            />
+            <input
+              type="hidden"
+              name="description"
+              value="<%= restaurant.description%>"
+            />
+            <input type="hidden" name="img" value="<%= restaurant.img %>" />
+            <button class="restaurant-btn">More Info</button>
+          </form>
         </div>
         <div class="restaurant-img">
           <img

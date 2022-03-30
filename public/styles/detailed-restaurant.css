@@ -1,0 +1,10 @@
+.detailed-restaurant {
+  padding:8rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.detailed-restaurant div:first-child {
+  display:flex;
+  flex-direction:column;
+  gap: 2rem;
+}
