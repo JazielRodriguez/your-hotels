@@ -21,7 +21,10 @@
           <p><%= room.description %></p>
           <div class="room-info">
             <p>$ <%= room.price %></p>
-            <button>Reservar</button>
+            <form action="/rooms/<%=room._id%>" method="post">
+              <input type="hidden" name="roomName" value="<%=room.roomName%>" />
+              <button>Reservar</button>
+            </form>
           </div>
         </div>
         <div class="img-room">
