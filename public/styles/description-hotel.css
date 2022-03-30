@@ -39,6 +39,6 @@
 }
 @media (max-width: 768px) {
   .map {
-    width: 35rem;
+    width: 100%;
   }
 }

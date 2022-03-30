@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/activities.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <title>Actividades</title>
   </head>
   <body>
     <%- include('includes/header') %>
-    <div>
+    <h1 class="container title">Activities</h1>
+    <div class="container activities">
       <% for (const activity of activities) { %>
-        <div>
-          <p><%=activity.activityName %></p>
-          <% } %> 
-        </div>
+      <div class="activity">
+        <img src="<%= activity.img %>" alt="<%=activity.activityName %>" />
+        <p><%= activity.activityName %></p>
+      </div>
+      <% } %>
     </div>
     <%- include('includes/footer') %>
   </body>

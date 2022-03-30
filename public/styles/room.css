@@ -35,3 +35,10 @@
   border-radius: 0.6rem;
   color: #fff;
 }
+
+@media (max-width:768px) {
+  .room {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 30rem;
+  }
+}
