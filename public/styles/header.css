@@ -18,6 +18,26 @@
 .menu {
   display: none;
 }
+#menu-bar {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--azul);
+  color: #fff;
+  display: none;
+}
+#menu-bar p {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+}
 @media (max-width: 1024px) {
   .header-content {
     flex-direction: column;
@@ -25,6 +45,9 @@
   }
 }
 @media (max-width: 480px) {
+  .header-content {
+    flex-direction: row;
+  }
   .header-content nav {
     display: none;
   }
