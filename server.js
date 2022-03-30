@@ -16,14 +16,18 @@ app.get('/rooms', async (req, res) => {
   res.render('rooms', { rooms })
 })
 app.get('/restaurants', async (req, res) => {
-  const restaurants = await db.get().collection('restaurants').find().toArray()
+  const restaurants = await db
+    .getDb()
+    .collection('restaurants')
+    .find()
+    .toArray()
   // await console.log(restaurants)
-  res.render('restaurants')
+  res.render('restaurants', { restaurants })
 })
 app.get('/activities', async (req, res) => {
-  const activities = await db.get().collection('activities').find().toArray()
+  const activities = await db.getDb().collection('activities').find().toArray()
   // await console.log(activities)
-  res.render('activities')
+  res.render('activities', { activities })
 })
 app.get('/cart', (req, res) => {
   res.render('cart')

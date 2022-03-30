@@ -10,6 +10,14 @@
     <title>Actividades</title>
   </head>
   <body>
-    <%- include('includes/header') %> <%- include('includes/footer') %>
+    <%- include('includes/header') %>
+    <div>
+      <% for (const activity of activities) { %>
+        <div>
+          <p><%=activity.activityName %></p>
+          <% } %> 
+        </div>
+    </div>
+    <%- include('includes/footer') %>
   </body>
 </html>

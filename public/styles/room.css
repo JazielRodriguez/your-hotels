@@ -28,3 +28,10 @@
   display: flex;
   justify-content: space-around;
 }
+.room-info button {
+  border: none;
+  padding: 1.5rem 1rem;
+  background-color: var(--azul);
+  border-radius: 0.6rem;
+  color: #fff;
+}

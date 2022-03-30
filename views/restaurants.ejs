@@ -6,10 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/restaurant.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <title>Restaurantes</title>
   </head>
   <body>
-    <%- include('includes/header') %> <%- include('includes/footer') %>
+    <%- include('includes/header') %>
+    <div class="container restaurants">
+      <h1>Restaurants</h1>
+      <% for (const restaurant of restaurants) { %>
+      <div class="restaurant">
+        <div class="restaurant-description">
+          <h3><%= restaurant.restaurantName %></h3>
+          <p><%= restaurant.cuisine %></p>
+          <p><%= restaurant.description %></p>
+          <button class="restaurant-btn">More Info</button>
+        </div>
+        <div class="restaurant-img">
+          <img
+            src="<%=restaurant.img %>"
+            alt="<%=restaurant.restaurantName %>"
+          />
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <%- include('includes/footer') %>
   </body>
 </html>
